@@ -1,0 +1,47 @@
+{
+  "name": "vue-template",
+  "version": "1.1.0",
+  "description": "",
+  "main": "index.js",
+  "scripts": {
+    "test": "echo \"Error: no test specified\" && exit 1",
+    "prepare": "husky install",
+    "lint": "eslint .",
+    "lint:fix": "eslint . --fix --color"
+  },
+  "husky": {
+    "hooks": {
+      "pre-commit": "npx lint-staged"
+    }
+  },
+  "lint-staged": {
+    "*.js": [
+      "yarn lint:fix",
+      "git add ."
+    ]
+  },
+  "repository": {
+    "type": "git",
+    "url": "git+https://github.com/GnomGadWTF/node-vue-template.git"
+  },
+  "keywords": [],
+  "author": "",
+  "license": "ISC",
+  "bugs": {
+    "url": "https://github.com/GnomGadWTF/node-vue-template/issues"
+  },
+  "homepage": "https://github.com/GnomGadWTF/node-vue-template#readme",
+  "devDependencies": {
+    "eslint": "^7.32.0",
+    "eslint-config-airbnb-base": "^14.2.1",
+    "eslint-plugin-import": "^2.24.2",
+    "eslint-plugin-vue": "^7.17.0",
+    "husky": "^7.0.0",
+    "lint-staged": "^11.1.2"
+  },
+  "dependencies": {
+    "dotenv": "^10.0.0",
+    "eslinter": "^3.2.1",
+    "vue": "^2.6.14"
+  }
+}
